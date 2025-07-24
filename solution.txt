@@ -1,2 +1,25 @@
 Please add your pseudocode to this file
 And a written explanation of your solution
+
+Define function consecutiveSubstrings with input of string
+
+Result is the empty list where I will add my letter combinations
+to after it has successfully looped.
+
+The string is like an array and for every letter in that array
+loop through from an index of 'i', until you have reached end of word, or length of the string
+
+    For each letter in the array, loop through from index of 'j' from 'i+1' 
+    until end of string, or length of string:
+        Extract the shorter string from index i up to but not including index j
+        Append the shorter string to result
+
+Return result
+
+
+
+This function takes a string, loops through the string (the index decides where it starts)
+and pairs it with the rest of the word after, and also loops within that word
+to see where the substring ends. The slice tool cuts the piece of the string and 
+tells the function where to start and end. After going through all possible start and end combinations, 
+return the list of all substrings.

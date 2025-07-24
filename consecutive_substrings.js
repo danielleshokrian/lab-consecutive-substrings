@@ -1,5 +1,13 @@
 function consecutiveSubstrings(string) {
-  // type your code here
+  const result = [];
+
+  for (let i = 0; i < string.length; i++) {
+    for (let j = i + 1; j <= string.length; j++) {
+      result.push(string.slice(i, j));
+    }
+  }
+
+  return result;
 }
 
 if (require.main === module) {
@@ -11,6 +19,9 @@ if (require.main === module) {
 
   console.log("Expecting: ['a']");
   console.log("=>", consecutiveSubstrings('a'));
+  
+  console.log("Expecting: ['h', 'he', 'hel', 'hell', 'hello', 'e', 'el', 'ell', 'ello', 'l', 'll', 'llo', 'l', 'lo', 'o']");
+  console.log("=>", consecutiveSubstrings('hello'));
 }
 
 module.exports = consecutiveSubstrings;
